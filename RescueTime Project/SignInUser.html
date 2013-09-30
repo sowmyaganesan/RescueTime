@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+	<script src="database.js"></script>
+	<script src="insertquery.js"></script>
+	<script src="selectquery.js"></script>
+    <script src="signin.js"></script>
+	<link rel="stylesheet" href="signin.css">
+  </head>
+  <body>
+    <h2>SignIn</h2>
+    <div ng-controller="SignInCtrl">
+    <form ng-submit="signInUser()" id="signInForm">
+        <label for = "inputemail">Email: </label> <div id="req">* </div><input id="inputemail" type="email" ng-model="inputemail" placeholder="joe@gmail.com" required>
+        <label for = "inputpassword">Password: </label><div id="req">* </div><input id="inputpassword" type="password" ng-model="inputpassword" required>
+		<input type="submit" name="submit" value="Sign In">
+		<div> {{alertMessage}}</div>
+      </form>
+    </div>
+  </body>
+</html>
